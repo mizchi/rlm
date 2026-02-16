@@ -43,7 +43,7 @@ describe('longRun improvement', () => {
     const snapshot = await collectMetricSnapshotBySymbols({
       candidate,
       iteration: 0,
-      state: { repo: 'mizchi/rlm-dspy' },
+      state: { repo: 'mizchi/rlm' },
       objectives,
       constraints,
     });
@@ -76,7 +76,7 @@ describe('longRun improvement', () => {
     const report = await runLongImprovementLoop<{ openIssues: number }, { repo: string }>({
       baseline,
       policy,
-      initialState: { repo: 'mizchi/rlm-dspy' },
+      initialState: { repo: 'mizchi/rlm' },
       maxIterations: 3,
       stopWhenNoAccept: true,
       generateCandidates: async ({ iteration }) =>

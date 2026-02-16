@@ -1,10 +1,10 @@
-# rlm/dspy Library Guide
+# rlm Library Guide
 
-This guide is for people using `rlm/dspy` as a library.
+This guide is for people using `rlm` as a library.
 
 ## 1. What this library does
 
-`rlm/dspy` is a TypeScript runtime that implements the core ideas of RLM (Recursive Language Models).
+`rlm` is a TypeScript runtime that implements the core ideas of RLM (Recursive Language Models).
 
 The core model is:
 
@@ -240,7 +240,7 @@ const out = await runPlannedRLM({
   symbols,
   longRun: {
     baseline: { metrics: { openIssues: 100 } },
-    initialState: { repo: 'mizchi/rlm-dspy' },
+    initialState: { repo: 'mizchi/rlm' },
     generateCandidates: async () => proposeCandidates(),
   },
 });

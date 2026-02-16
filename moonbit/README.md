@@ -1,6 +1,6 @@
-# rlm_dspy_moonbit
+# rlm_moonbit
 
-MoonBit port of `rlm/dspy` semantics (improvement loop + RLM runtime + planner/eval utility layer).
+MoonBit port of `rlm` semantics (improvement loop + RLM runtime + planner/eval utility layer).
 
 ## Scope
 

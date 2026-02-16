@@ -1,5 +1,5 @@
 {
-  "name": "mizchi/rlm_dspy_moonbit",
+  "name": "mizchi/rlm_moonbit",
   "version": "0.1.0",
   "deps": {
     "mizchi/llm": {
@@ -8,6 +8,6 @@
   },
   "source": "src",
   "readme": "README.md",
-  "repository": "https://github.com/mizchi/rlm-dspy",
+  "repository": "https://github.com/mizchi/rlm",
   "license": "MIT"
 }

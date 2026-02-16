@@ -1,4 +1,4 @@
-# rlm/dspy
+# rlm
 
 RLM (Recursive Language Models) の TypeScript 仮実装です。
 
@@ -229,9 +229,9 @@ const policy = buildPolicyFromMetricSymbols({
 });
 
 const report = await runLongImprovementLoop({
-  baseline: { metrics: { openIssues: await getOpenIssues('mizchi/rlm-dspy') } },
+  baseline: { metrics: { openIssues: await getOpenIssues('mizchi/rlm') } },
   policy,
-  initialState: { repo: 'mizchi/rlm-dspy' },
+  initialState: { repo: 'mizchi/rlm' },
   maxIterations: 30,
   stopWhenNoAccept: true,
   generateCandidates: async () => proposeCandidatesFromAgent(),

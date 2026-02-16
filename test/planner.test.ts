@@ -110,7 +110,7 @@ describe('planner', () => {
       },
       longRun: {
         baseline: { metrics: { openIssues: 100 } },
-        initialState: { repo: 'mizchi/rlm-dspy' },
+        initialState: { repo: 'mizchi/rlm' },
         generateCandidates: async ({ iteration }) =>
           iteration === 0
             ? [{ id: 'a', input: { openIssues: 95 } }]

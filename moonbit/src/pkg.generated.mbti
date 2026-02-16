@@ -1,5 +1,5 @@
 // Generated using `moon info`, DON'T EDIT IT
-package "mizchi/rlm_dspy_moonbit"
+package "mizchi/rlm_moonbit"
 
 import {
   "mizchi/llm",
@@ -495,4 +495,3 @@ pub struct RoundSummary {
 // Type aliases
 
 // Traits
-

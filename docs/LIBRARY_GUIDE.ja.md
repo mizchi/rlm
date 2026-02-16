@@ -1,10 +1,10 @@
-# rlm/dspy ライブラリガイド
+# rlm ライブラリガイド
 
-このガイドは、`rlm/dspy` を「ライブラリとして使う人」向けの説明です。
+このガイドは、`rlm` を「ライブラリとして使う人」向けの説明です。
 
 ## 1. これは何をやっているライブラリか
 
-`rlm/dspy` は、RLM (Recursive Language Models) の考え方を TypeScript で実装したランタイムです。
+`rlm` は、RLM (Recursive Language Models) の考え方を TypeScript で実装したランタイムです。
 
 このライブラリの核心は次の3点です。
 
@@ -240,7 +240,7 @@ const out = await runPlannedRLM({
   symbols,
   longRun: {
     baseline: { metrics: { openIssues: 100 } },
-    initialState: { repo: 'mizchi/rlm-dspy' },
+    initialState: { repo: 'mizchi/rlm' },
     generateCandidates: async () => proposeCandidates(),
   },
 });
