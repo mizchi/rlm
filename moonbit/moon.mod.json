@@ -2,9 +2,7 @@
   "name": "mizchi/rlm_moonbit",
   "version": "0.1.0",
   "deps": {
-    "mizchi/llm": {
-      "path": "../../../llm"
-    }
+    "mizchi/llm": "0.2.2"
   },
   "source": "src",
   "readme": "README.md",
