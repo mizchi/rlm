@@ -2,6 +2,10 @@
 
 RLM (Recursive Language Models) の TypeScript 仮実装です。
 
+## 参考論文
+
+- https://arxiv.org/abs/2512.24601
+
 利用者向けガイド:
 
 - index: `docs/LIBRARY_GUIDE.md`
