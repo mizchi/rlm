@@ -33,12 +33,16 @@ export class OpenAIProvider implements LLMProvider {
 
   constructor(options: OpenAIProviderOptions) {
     this.model = options.model;
-    this.apiKey = options.apiKey ?? process.env.OPENAI_API_KEY ?? '';
+    this.apiKey =
+      options.apiKey ??
+      process.env.RLM_OPENAI_API_KEY ??
+      process.env.OPENAI_API_KEY ??
+      '';
     this.baseURL = options.baseURL ?? 'https://api.openai.com/v1';
     this.timeoutMs = options.timeoutMs ?? 30_000;
 
     if (this.apiKey === '') {
-      throw new Error('OPENAI_API_KEY is required');
+      throw new Error('RLM_OPENAI_API_KEY or OPENAI_API_KEY is required');
     }
   }
 

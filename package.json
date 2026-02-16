@@ -4,9 +4,23 @@
   "private": false,
   "type": "module",
   "description": "RLM (Recursive Language Models) TypeScript prototype",
-  "main": "./src/index.ts",
+  "main": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "import": "./dist/index.mjs"
+    },
+    "./cli": {
+      "types": "./dist/cli.d.mts",
+      "import": "./dist/cli.mjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "bin": "rlm",
   "files": [
-    "src",
+    "rlm",
+    "dist",
     "README.md",
     "docs",
     "LICENSE*"
@@ -15,6 +29,9 @@
     "access": "public"
   },
   "scripts": {
+    "build": "tsdown src/index.ts src/cli.ts --format esm --dts --out-dir dist --clean",
+    "prepack": "pnpm run build",
+    "release:npm": "npm publish --access public",
     "test": "vitest run",
     "test:watch": "vitest",
     "check": "tsc --noEmit",
@@ -28,6 +45,7 @@
     "lint:longrun": "node scripts/lint_long_run.ts --planner-provider mock --candidate-limit 3 --max-iterations 2"
   },
   "devDependencies": {
+    "tsdown": "^0.20.3",
     "typescript": "^5.9.3",
     "vitest": "^3.2.4"
   }

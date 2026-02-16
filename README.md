@@ -13,6 +13,30 @@ RLM (Recursive Language Models) の TypeScript 仮実装です。
 - English: `docs/LIBRARY_GUIDE.en.md`
 - semantics: `docs/SEMANTICS.ja.md`
 
+## npm (JavaScript)
+
+- ライブラリ利用:
+
+  ```ts
+  import { rlm } from '@mizchi/rlm';
+  ```
+
+- CLI 利用:
+
+  ```bash
+  npx @mizchi/rlm --help
+  npx @mizchi/rlm eval --provider mock --cases eval/cases.sample.jsonl --profile hybrid
+  RLM_OPENAI_API_KEY=sk-... npx @mizchi/rlm eval --provider openai --model gpt-4.1-mini --cases eval/cases.sample.jsonl --profile hybrid
+  ```
+
+- リリース:
+
+  ```bash
+  pnpm run release:npm
+  ```
+
+  `release:npm` は `prepack` で `tsdown` ビルドを実行してから `npm publish` します。
+
 ## 目的
 
 - prompt 本文を LLM 履歴に入れず、REPL 環境に保持する
@@ -307,7 +331,8 @@ pnpm eval:pure
 ### 2) OpenAI で実評価
 
 ```bash
-export OPENAI_API_KEY=...
+export RLM_OPENAI_API_KEY=...
+# または OPENAI_API_KEY でも可
 pnpm eval:openai
 pnpm eval:openai:pure
 ```
