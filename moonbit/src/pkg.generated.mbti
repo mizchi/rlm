@@ -1,5 +1,5 @@
 // Generated using `moon info`, DON'T EDIT IT
-package "mizchi/rlm_moonbit"
+package "mizchi/rlm"
 
 import {
   "mizchi/llm",

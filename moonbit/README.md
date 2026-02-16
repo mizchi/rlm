@@ -1,4 +1,4 @@
-# rlm_moonbit
+# rlm
 
 MoonBit port of `rlm` semantics (improvement loop + RLM runtime + planner/eval utility layer).
 
